@@ -12,7 +12,9 @@ import Recibir from './components/Recibir';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    
     <App />
+    
     </BrowserRouter>
     
     

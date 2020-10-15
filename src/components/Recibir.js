@@ -7,6 +7,9 @@ import queryString from 'query-string'
 
 
 const Recibir = (props)=>{
+    const enviar = (data, e) => {
+        console.log(data);
+    }
     const {match, location} = props;
     console.log('match', match);
     var query = queryString.parse(location.search);
@@ -21,15 +24,15 @@ const Recibir = (props)=>{
                 <p>{query.apellidoPaterno}</p>
                 <p>{query.telefono}</p>
                 <p>{query.correo}</p>
+                <div> {query.Formulario}</div>
                 </center>
-                <ul>
-                    <center>
-                <button className="btn btn-primary">Inicio</button>
+               
                 
-                </center>
-                </ul>
         </Fragment>
     )
 }
+
+
+   
 
 export default withRouter(Recibir);

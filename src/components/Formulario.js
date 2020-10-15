@@ -12,7 +12,7 @@ const Formulario = () => {
 
     
 
-    const enviar = (data, e) => {
+    const onSubmit = (data, e) => {
         console.log(data);
         setEntradas([
             ...Entradas,
@@ -22,11 +22,21 @@ const Formulario = () => {
 
         
     }
+    const enviar = (data, e) => {
+        console.log(data);
+
+    }
+   
     return (
         <Fragment>
             <h1>Registro</h1>
+          
             
-           <form  onSubmit={enviar} action='/Recibir.js'>
+           <form onSubmit={(enviar)} action='/recibir'>
+            
+              
+            
+           
            <div class="row">
                
                
@@ -154,7 +164,7 @@ const Formulario = () => {
                         </div>
                         </div>
                         
-                 <button className="btn btn-primary">Enviar</button>
+                 <button className="btn btn-primary" >Enviar</button>
                  
 
 
